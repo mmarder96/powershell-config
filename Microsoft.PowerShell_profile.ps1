@@ -4,23 +4,15 @@
 oh-my-posh --init --shell pwsh --config "${HOME}\.config\oh-my-posh\theme.json" | Invoke-Expression
 
 
-# LAZYVIM --------------------------------------------------------------------#
-
-# Update XDG config and data base directories to point to ~/.config
-$XDG_CONFIG_HOME = "${HOME}/.config"
-$XDG_DATA_HOME = "${HOME}/.config"
-
-
 # AUTOCOMPLETE & SUGGESTIONS -------------------------------------------------#
-
-# thefuck
-$env:PYTHONIOENCODING="utf-8"
-Invoke-Expression "$(thefuck --alias heck)"
 
 # PSReadLine
 Set-PSReadLineOption -Colors @{ "InlinePrediction"="#007e3f" }
 Set-PSReadLineOption -EditMode Windows
 Set-PSReadLineOption -PredictionSource HistoryAndPlugin
+
+# CommandNotFound
+Import-Module -Name Microsoft.WinGet.CommandNotFound
 
 
 # HISTORY & SEARCH -----------------------------------------------------------#
@@ -30,6 +22,7 @@ Set-PsFzfOption -PSReadlineChordProvider 'Ctrl+t' -PSReadlineChordReverseHistory
 Set-PSReadLineKeyHandler -Key Tab -ScriptBlock { Invoke-FzfTabCompletion }
 
 # Zoxide
+Invoke-Expression (& { (zoxide init powershell | Out-String) })
 Invoke-Expression (& { (zoxide init powershell --cmd cd | Out-String) })
 
 
@@ -51,6 +44,20 @@ function ezall {
   eza --color=always --git --group --group-directories-first --icons=always --long @args
 }
 
+function lf {
+    $tmp = [System.IO.Path]::GetTempFileName()
+    yazi $args --cwd-file="$tmp"
+    $cwd = Get-Content -Path $tmp
+    if (-not [String]::IsNullOrEmpty($cwd) -and $cwd -ne $PWD.Path) {
+        cd $cwd
+    }
+    Remove-Item -Path $tmp
+}
+
+function symlink {
+  New-Item -ItemType SymbolicLink -Path $args[0] -Target $args[1]
+}
+
 function source {
   . @args
 }
@@ -62,4 +69,5 @@ Set-Alias -Name k -Value kubectl
 Set-Alias -Name ls -Value ezals
 Set-Alias -Name ll -Value ezall
 Set-Alias -Name lzg -Value lazygit
+Set-Alias -Name mklink -Value symlink
 Set-Alias -Name vim -Value nvim

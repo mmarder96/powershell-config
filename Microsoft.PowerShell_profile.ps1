@@ -21,7 +21,7 @@ Import-Module -Name Microsoft.WinGet.CommandNotFound
 # TheFuck
 # ------------------------------------------------------------------------------
 $env:PYTHONIOENCODING="utf-8"
-Invoke-Expression "thefuck --alias heck"
+Invoke-Expression (& { (thefuck --alias heck | Out-String) })
 
 
 # HISTORY & SEARCH

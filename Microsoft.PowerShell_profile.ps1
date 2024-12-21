@@ -1,39 +1,54 @@
-# USER INTERFACE ------------------------------------------------------------- #
+# USER INTERFACE
+# ==============================================================================
 
 # Oh My Posh
+# ------------------------------------------------------------------------------
 oh-my-posh --init --shell pwsh --config "${HOME}\.config\oh-my-posh\theme.json" | Invoke-Expression
 
-
-# AUTOCOMPLETE & SUGGESTIONS ------------------------------------------------- #
+# AUTOCOMPLETE & SUGGESTIONS
+# ==============================================================================
 
 # PSReadLine
+# ------------------------------------------------------------------------------
 Set-PSReadLineOption -Colors @{ "InlinePrediction"="#007e3f" }
 Set-PSReadLineOption -EditMode Windows
 Set-PSReadLineOption -PredictionSource HistoryAndPlugin
 
 # CommandNotFound
+# ------------------------------------------------------------------------------
 Import-Module -Name Microsoft.WinGet.CommandNotFound
 
+# TheFuck
+# ------------------------------------------------------------------------------
+$env:PYTHONIOENCODING="utf-8"
+Invoke-Expression "thefuck --alias heck"
 
-# HISTORY & SEARCH ----------------------------------------------------------- #
+
+# HISTORY & SEARCH
+# ==============================================================================
 
 # PSFzf
+# ------------------------------------------------------------------------------
 Set-PsFzfOption -PSReadlineChordProvider 'Ctrl+t' -PSReadlineChordReverseHistory 'Ctrl+r'
 Set-PSReadLineKeyHandler -Key Tab -ScriptBlock { Invoke-FzfTabCompletion }
 
 # Zoxide
+# ------------------------------------------------------------------------------
 $global:__zoxide_hooked = 0
 $env:_ZO_DATA_DIR = "${HOME}\.config\zoxide"
 $env:_ZO_RESOLVE_SYMLINKS = 1
 Invoke-Expression (& { (zoxide init powershell --cmd cd | Out-String) })
 
 
-# FUNCTIONS & ALIASES -------------------------------------------------------- #
+# FUNCTIONS & ALIASES
+# ==============================================================================
 
 # Zsh Git Aliases
+# ------------------------------------------------------------------------------
 Import-Module git-aliases -DisableNameChecking
 
 # Functions
+# ------------------------------------------------------------------------------
 function batcat {
   bat --style=plain --pager=never @args
 }
@@ -65,6 +80,7 @@ function source {
 }
 
 # Aliases
+# ------------------------------------------------------------------------------
 Set-Alias -Name cat -Value batcat
 Set-Alias -Name e -Value explorer
 Set-Alias -Name g -Value git

@@ -5,6 +5,7 @@
 # ------------------------------------------------------------------------------
 oh-my-posh --init --shell pwsh --config "${HOME}\.config\oh-my-posh\theme.json" | Invoke-Expression
 
+
 # AUTOCOMPLETE & SUGGESTIONS
 # ==============================================================================
 

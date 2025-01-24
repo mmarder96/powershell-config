@@ -1,0 +1,524 @@
+<Objs Version="1.1.0.1" xmlns="http://schemas.microsoft.com/powershell/2004/04">
+  <Obj RefId="0">
+    <TN RefId="0">
+      <T>System.Management.Automation.PSCustomObject</T>
+      <T>System.Object</T>
+    </TN>
+    <MS>
+      <S N="Name">git-aliases</S>
+      <S N="Version">0.3.7</S>
+      <Obj N="Type" RefId="1">
+        <TN RefId="1">
+          <T>Microsoft.PowerShell.PSResourceGet.UtilClasses.ResourceType</T>
+          <T>System.Enum</T>
+          <T>System.ValueType</T>
+          <T>System.Object</T>
+        </TN>
+        <ToString>Module</ToString>
+        <I32>1</I32>
+      </Obj>
+      <S N="Description">A PowerShell module that provide partial Git aliases from Oh My Zsh's git plugin.</S>
+      <S N="Author">Saran Tanpituckpong</S>
+      <S N="CompanyName"></S>
+      <S N="Copyright">(c) Saran Tanpituckpong. All rights reserved.</S>
+      <DT N="PublishedDate">2024-12-31T11:23:35.323</DT>
+      <DT N="InstalledDate">2025-01-10T09:48:42.0406202-08:00</DT>
+      <B N="IsPrerelease">false</B>
+      <Nil N="UpdatedDate" />
+      <URI N="LicenseUri">https://github.com/gluons/powershell-git-aliases/blob/master/LICENSE</URI>
+      <URI N="ProjectUri">https://github.com/gluons/powershell-git-aliases</URI>
+      <Nil N="IconUri" />
+      <Obj N="Tags" RefId="2">
+        <TN RefId="2">
+          <T>System.String[]</T>
+          <T>System.Array</T>
+          <T>System.Object</T>
+        </TN>
+        <LST>
+          <S>git</S>
+          <S>alias</S>
+          <S>aliases</S>
+          <S>oh-my-zsh</S>
+          <S>PSModule</S>
+          <S>PSFunction_g</S>
+          <S>PSCommand_g</S>
+          <S>PSFunction_ga</S>
+          <S>PSCommand_ga</S>
+          <S>PSFunction_gaa</S>
+          <S>PSCommand_gaa</S>
+          <S>PSFunction_gapa</S>
+          <S>PSCommand_gapa</S>
+          <S>PSFunction_gau</S>
+          <S>PSCommand_gau</S>
+          <S>PSFunction_gb</S>
+          <S>PSCommand_gb</S>
+          <S>PSFunction_gba</S>
+          <S>PSCommand_gba</S>
+          <S>PSFunction_gbd</S>
+          <S>PSCommand_gbd</S>
+          <S>PSFunction_gbda</S>
+          <S>PSCommand_gbda</S>
+          <S>PSFunction_gbl</S>
+          <S>PSCommand_gbl</S>
+          <S>PSFunction_gbnm</S>
+          <S>PSCommand_gbnm</S>
+          <S>PSFunction_gbr</S>
+          <S>PSCommand_gbr</S>
+          <S>PSFunction_gbs</S>
+          <S>PSCommand_gbs</S>
+          <S>PSFunction_gbsb</S>
+          <S>PSCommand_gbsb</S>
+          <S>PSFunction_gbsg</S>
+          <S>PSCommand_gbsg</S>
+          <S>PSFunction_gbsr</S>
+          <S>PSCommand_gbsr</S>
+          <S>PSFunction_gbss</S>
+          <S>PSCommand_gbss</S>
+          <S>PSFunction_gc</S>
+          <S>PSCommand_gc</S>
+          <S>PSFunction_gc!</S>
+          <S>PSCommand_gc!</S>
+          <S>PSFunction_gcn!</S>
+          <S>PSCommand_gcn!</S>
+          <S>PSFunction_gca</S>
+          <S>PSCommand_gca</S>
+          <S>PSFunction_gcam</S>
+          <S>PSCommand_gcam</S>
+          <S>PSFunction_gca!</S>
+          <S>PSCommand_gca!</S>
+          <S>PSFunction_gcan!</S>
+          <S>PSCommand_gcan!</S>
+          <S>PSFunction_gcans!</S>
+          <S>PSCommand_gcans!</S>
+          <S>PSFunction_gcb</S>
+          <S>PSCommand_gcb</S>
+          <S>PSFunction_gcf</S>
+          <S>PSCommand_gcf</S>
+          <S>PSFunction_gcl</S>
+          <S>PSCommand_gcl</S>
+          <S>PSFunction_gclean</S>
+          <S>PSCommand_gclean</S>
+          <S>PSFunction_gcm</S>
+          <S>PSCommand_gcm</S>
+          <S>PSFunction_gcd</S>
+          <S>PSCommand_gcd</S>
+          <S>PSFunction_gcmsg</S>
+          <S>PSCommand_gcmsg</S>
+          <S>PSFunction_gco</S>
+          <S>PSCommand_gco</S>
+          <S>PSFunction_gcount</S>
+          <S>PSCommand_gcount</S>
+          <S>PSFunction_gcp</S>
+          <S>PSCommand_gcp</S>
+          <S>PSFunction_gcpa</S>
+          <S>PSCommand_gcpa</S>
+          <S>PSFunction_gcpc</S>
+          <S>PSCommand_gcpc</S>
+          <S>PSFunction_gcs</S>
+          <S>PSCommand_gcs</S>
+          <S>PSFunction_gd</S>
+          <S>PSCommand_gd</S>
+          <S>PSFunction_gds</S>
+          <S>PSCommand_gds</S>
+          <S>PSFunction_gdca</S>
+          <S>PSCommand_gdca</S>
+          <S>PSFunction_gdt</S>
+          <S>PSCommand_gdt</S>
+          <S>PSFunction_gdw</S>
+          <S>PSCommand_gdw</S>
+          <S>PSFunction_gf</S>
+          <S>PSCommand_gf</S>
+          <S>PSFunction_gfa</S>
+          <S>PSCommand_gfa</S>
+          <S>PSFunction_gfo</S>
+          <S>PSCommand_gfo</S>
+          <S>PSFunction_gg</S>
+          <S>PSCommand_gg</S>
+          <S>PSFunction_gga</S>
+          <S>PSCommand_gga</S>
+          <S>PSFunction_ggf</S>
+          <S>PSCommand_ggf</S>
+          <S>PSFunction_ggfl</S>
+          <S>PSCommand_ggfl</S>
+          <S>PSFunction_ghh</S>
+          <S>PSCommand_ghh</S>
+          <S>PSFunction_ggsup</S>
+          <S>PSCommand_ggsup</S>
+          <S>PSFunction_gpsup</S>
+          <S>PSCommand_gpsup</S>
+          <S>PSFunction_gignore</S>
+          <S>PSCommand_gignore</S>
+          <S>PSFunction_gignored</S>
+          <S>PSCommand_gignored</S>
+          <S>PSFunction_gl</S>
+          <S>PSCommand_gl</S>
+          <S>PSFunction_glg</S>
+          <S>PSCommand_glg</S>
+          <S>PSFunction_glgg</S>
+          <S>PSCommand_glgg</S>
+          <S>PSFunction_glgga</S>
+          <S>PSCommand_glgga</S>
+          <S>PSFunction_glgm</S>
+          <S>PSCommand_glgm</S>
+          <S>PSFunction_glgp</S>
+          <S>PSCommand_glgp</S>
+          <S>PSFunction_glo</S>
+          <S>PSCommand_glo</S>
+          <S>PSFunction_glog</S>
+          <S>PSCommand_glog</S>
+          <S>PSFunction_gloga</S>
+          <S>PSCommand_gloga</S>
+          <S>PSFunction_glol</S>
+          <S>PSCommand_glol</S>
+          <S>PSFunction_glola</S>
+          <S>PSCommand_glola</S>
+          <S>PSFunction_gm</S>
+          <S>PSCommand_gm</S>
+          <S>PSFunction_gmom</S>
+          <S>PSCommand_gmom</S>
+          <S>PSFunction_gmt</S>
+          <S>PSCommand_gmt</S>
+          <S>PSFunction_gmtvim</S>
+          <S>PSCommand_gmtvim</S>
+          <S>PSFunction_gmum</S>
+          <S>PSCommand_gmum</S>
+          <S>PSFunction_gp</S>
+          <S>PSCommand_gp</S>
+          <S>PSFunction_gpd</S>
+          <S>PSCommand_gpd</S>
+          <S>PSFunction_gpf</S>
+          <S>PSCommand_gpf</S>
+          <S>PSFunction_gpf!</S>
+          <S>PSCommand_gpf!</S>
+          <S>PSFunction_gpoat</S>
+          <S>PSCommand_gpoat</S>
+          <S>PSFunction_gpr</S>
+          <S>PSCommand_gpr</S>
+          <S>PSFunction_gpra</S>
+          <S>PSCommand_gpra</S>
+          <S>PSFunction_gpristine</S>
+          <S>PSCommand_gpristine</S>
+          <S>PSFunction_gprv</S>
+          <S>PSCommand_gprv</S>
+          <S>PSFunction_gpu</S>
+          <S>PSCommand_gpu</S>
+          <S>PSFunction_gpv</S>
+          <S>PSCommand_gpv</S>
+          <S>PSFunction_gr</S>
+          <S>PSCommand_gr</S>
+          <S>PSFunction_gra</S>
+          <S>PSCommand_gra</S>
+          <S>PSFunction_grb</S>
+          <S>PSCommand_grb</S>
+          <S>PSFunction_grba</S>
+          <S>PSCommand_grba</S>
+          <S>PSFunction_grbc</S>
+          <S>PSCommand_grbc</S>
+          <S>PSFunction_grbi</S>
+          <S>PSCommand_grbi</S>
+          <S>PSFunction_grbm</S>
+          <S>PSCommand_grbm</S>
+          <S>PSFunction_grbs</S>
+          <S>PSCommand_grbs</S>
+          <S>PSFunction_grh</S>
+          <S>PSCommand_grh</S>
+          <S>PSFunction_grhh</S>
+          <S>PSCommand_grhh</S>
+          <S>PSFunction_grmv</S>
+          <S>PSCommand_grmv</S>
+          <S>PSFunction_groh</S>
+          <S>PSCommand_groh</S>
+          <S>PSFunction_grrm</S>
+          <S>PSCommand_grrm</S>
+          <S>PSFunction_grs</S>
+          <S>PSCommand_grs</S>
+          <S>PSFunction_grst</S>
+          <S>PSCommand_grst</S>
+          <S>PSFunction_grset</S>
+          <S>PSCommand_grset</S>
+          <S>PSFunction_grt</S>
+          <S>PSCommand_grt</S>
+          <S>PSFunction_gru</S>
+          <S>PSCommand_gru</S>
+          <S>PSFunction_grup</S>
+          <S>PSCommand_grup</S>
+          <S>PSFunction_grv</S>
+          <S>PSCommand_grv</S>
+          <S>PSFunction_gsb</S>
+          <S>PSCommand_gsb</S>
+          <S>PSFunction_gsd</S>
+          <S>PSCommand_gsd</S>
+          <S>PSFunction_gsh</S>
+          <S>PSCommand_gsh</S>
+          <S>PSFunction_gsi</S>
+          <S>PSCommand_gsi</S>
+          <S>PSFunction_gsps</S>
+          <S>PSCommand_gsps</S>
+          <S>PSFunction_gsr</S>
+          <S>PSCommand_gsr</S>
+          <S>PSFunction_gss</S>
+          <S>PSCommand_gss</S>
+          <S>PSFunction_gst</S>
+          <S>PSCommand_gst</S>
+          <S>PSFunction_gsta</S>
+          <S>PSCommand_gsta</S>
+          <S>PSFunction_gstaa</S>
+          <S>PSCommand_gstaa</S>
+          <S>PSFunction_gstd</S>
+          <S>PSCommand_gstd</S>
+          <S>PSFunction_gstl</S>
+          <S>PSCommand_gstl</S>
+          <S>PSFunction_gstp</S>
+          <S>PSCommand_gstp</S>
+          <S>PSFunction_gstc</S>
+          <S>PSCommand_gstc</S>
+          <S>PSFunction_gsts</S>
+          <S>PSCommand_gsts</S>
+          <S>PSFunction_gsu</S>
+          <S>PSCommand_gsu</S>
+          <S>PSFunction_gsw</S>
+          <S>PSCommand_gsw</S>
+          <S>PSFunction_gts</S>
+          <S>PSCommand_gts</S>
+          <S>PSFunction_gunignore</S>
+          <S>PSCommand_gunignore</S>
+          <S>PSFunction_gunwip</S>
+          <S>PSCommand_gunwip</S>
+          <S>PSFunction_gup</S>
+          <S>PSCommand_gup</S>
+          <S>PSFunction_gupa</S>
+          <S>PSCommand_gupa</S>
+          <S>PSFunction_gupv</S>
+          <S>PSCommand_gupv</S>
+          <S>PSFunction_glum</S>
+          <S>PSCommand_glum</S>
+          <S>PSFunction_gvt</S>
+          <S>PSCommand_gvt</S>
+          <S>PSFunction_gwch</S>
+          <S>PSCommand_gwch</S>
+          <S>PSFunction_gwip</S>
+          <S>PSCommand_gwip</S>
+          <S>PSFunction_ggl</S>
+          <S>PSCommand_ggl</S>
+          <S>PSFunction_ggp</S>
+          <S>PSCommand_ggp</S>
+          <S>PSFunction_ggpnp</S>
+          <S>PSCommand_ggpnp</S>
+          <S>PSFunction_gprom</S>
+          <S>PSCommand_gprom</S>
+          <S>PSFunction_Get-Git-CurrentBranch</S>
+          <S>PSCommand_Get-Git-CurrentBranch</S>
+          <S>PSFunction_Get-Git-MainBranch</S>
+          <S>PSCommand_Get-Git-MainBranch</S>
+          <S>PSFunction_Format-AliasDefinition</S>
+          <S>PSCommand_Format-AliasDefinition</S>
+          <S>PSFunction_Get-Git-Aliases</S>
+          <S>PSCommand_Get-Git-Aliases</S>
+          <S>PSFunction_Write-Host-Deprecated</S>
+          <S>PSCommand_Write-Host-Deprecated</S>
+          <S>PSIncludes_Function</S>
+        </LST>
+      </Obj>
+      <Obj N="Includes" RefId="3">
+        <TN RefId="3">
+          <T>System.Collections.Hashtable</T>
+          <T>System.Object</T>
+        </TN>
+        <DCT>
+          <En>
+            <S N="Key">Cmdlet</S>
+            <Obj N="Value" RefId="4">
+              <TNRef RefId="2" />
+              <LST />
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">Command</S>
+            <Obj N="Value" RefId="5">
+              <TNRef RefId="2" />
+              <LST>
+                <S>g</S>
+                <S>ga</S>
+                <S>gaa</S>
+                <S>gapa</S>
+                <S>gau</S>
+                <S>gb</S>
+                <S>gba</S>
+                <S>gbd</S>
+                <S>gbda</S>
+                <S>gbl</S>
+                <S>gbnm</S>
+                <S>gbr</S>
+                <S>gbs</S>
+                <S>gbsb</S>
+                <S>gbsg</S>
+                <S>gbsr</S>
+                <S>gbss</S>
+                <S>gc</S>
+                <S>gc!</S>
+                <S>gcn!</S>
+                <S>gca</S>
+                <S>gcam</S>
+                <S>gca!</S>
+                <S>gcan!</S>
+                <S>gcans!</S>
+                <S>gcb</S>
+                <S>gcf</S>
+                <S>gcl</S>
+                <S>gclean</S>
+                <S>gcm</S>
+                <S>gcd</S>
+                <S>gcmsg</S>
+                <S>gco</S>
+                <S>gcount</S>
+                <S>gcp</S>
+                <S>gcpa</S>
+                <S>gcpc</S>
+                <S>gcs</S>
+                <S>gd</S>
+                <S>gds</S>
+                <S>gdca</S>
+                <S>gdt</S>
+                <S>gdw</S>
+                <S>gf</S>
+                <S>gfa</S>
+                <S>gfo</S>
+                <S>gg</S>
+                <S>gga</S>
+                <S>ggf</S>
+                <S>ggfl</S>
+                <S>ghh</S>
+                <S>ggsup</S>
+                <S>gpsup</S>
+                <S>gignore</S>
+                <S>gignored</S>
+                <S>gl</S>
+                <S>glg</S>
+                <S>glgg</S>
+                <S>glgga</S>
+                <S>glgm</S>
+                <S>glgp</S>
+                <S>glo</S>
+                <S>glog</S>
+                <S>gloga</S>
+                <S>glol</S>
+                <S>glola</S>
+                <S>gm</S>
+                <S>gmom</S>
+                <S>gmt</S>
+                <S>gmtvim</S>
+                <S>gmum</S>
+                <S>gp</S>
+                <S>gpd</S>
+                <S>gpf</S>
+                <S>gpf!</S>
+                <S>gpoat</S>
+                <S>gpr</S>
+                <S>gpra</S>
+                <S>gpristine</S>
+                <S>gprv</S>
+                <S>gpu</S>
+                <S>gpv</S>
+                <S>gr</S>
+                <S>gra</S>
+                <S>grb</S>
+                <S>grba</S>
+                <S>grbc</S>
+                <S>grbi</S>
+                <S>grbm</S>
+                <S>grbs</S>
+                <S>grh</S>
+                <S>grhh</S>
+                <S>grmv</S>
+                <S>groh</S>
+                <S>grrm</S>
+                <S>grs</S>
+                <S>grst</S>
+                <S>grset</S>
+                <S>grt</S>
+                <S>gru</S>
+                <S>grup</S>
+                <S>grv</S>
+                <S>gsb</S>
+                <S>gsd</S>
+                <S>gsh</S>
+                <S>gsi</S>
+                <S>gsps</S>
+                <S>gsr</S>
+                <S>gss</S>
+                <S>gst</S>
+                <S>gsta</S>
+                <S>gstaa</S>
+                <S>gstd</S>
+                <S>gstl</S>
+                <S>gstp</S>
+                <S>gstc</S>
+                <S>gsts</S>
+                <S>gsu</S>
+                <S>gsw</S>
+                <S>gts</S>
+                <S>gunignore</S>
+                <S>gunwip</S>
+                <S>gup</S>
+                <S>gupa</S>
+                <S>gupv</S>
+                <S>glum</S>
+                <S>gvt</S>
+                <S>gwch</S>
+                <S>gwip</S>
+                <S>ggl</S>
+                <S>ggp</S>
+                <S>ggpnp</S>
+                <S>gprom</S>
+                <S>Get-Git-CurrentBranch</S>
+                <S>Get-Git-MainBranch</S>
+                <S>Format-AliasDefinition</S>
+                <S>Get-Git-Aliases</S>
+                <S>Write-Host-Deprecated</S>
+              </LST>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">DscResource</S>
+            <Obj N="Value" RefId="6">
+              <TNRef RefId="2" />
+              <LST />
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">Function</S>
+            <Nil N="Value" />
+          </En>
+          <En>
+            <S N="Key">Workflow</S>
+            <Nil N="Value" />
+          </En>
+          <En>
+            <S N="Key">RoleCapability</S>
+            <Nil N="Value" />
+          </En>
+        </DCT>
+      </Obj>
+      <S N="PowerShellGetFormatVersion"></S>
+      <S N="ReleaseNotes"></S>
+      <Obj N="Dependencies" RefId="7">
+        <TN RefId="4">
+          <T>Microsoft.PowerShell.PSResourceGet.UtilClasses.Dependency[]</T>
+          <T>System.Array</T>
+          <T>System.Object</T>
+        </TN>
+        <LST />
+      </Obj>
+      <S N="RepositorySourceLocation">https://www.powershellgallery.com/api/v2</S>
+      <S N="Repository">PSGallery</S>
+      <Obj N="AdditionalMetadata" RefId="8">
+        <TNRef RefId="0" />
+        <MS>
+          <S N="NormalizedVersion">0.3.7</S>
+          <S N="IsPrerelease">False</S>
+        </MS>
+      </Obj>
+      <S N="InstalledLocation">C:\Users\Max.Marder\.config\PowerShell\Modules</S>
+    </MS>
+  </Obj>
+</Objs>

@@ -89,7 +89,7 @@ Set-Alias -Name htop -Value ntop
 Set-Alias -Name k -Value kubectl
 Set-Alias -Name ls -Value ezals
 Set-Alias -Name ll -Value ezall
-Set-Alias -Name lzg -Value lazygit
+Set-Alias -Name lg -Value lazygit
 Set-Alias -Name mklink -Value symlink
 Set-Alias -Name vim -Value nvim
 
